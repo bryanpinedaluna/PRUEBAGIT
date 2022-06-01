@@ -14,19 +14,29 @@ class contenedores extends StatelessWidget {
   contenedores(this.ancho, this.largo, this.imagen, this.nombre, this.url);
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: this.ancho,
-        height: this.largo,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: NetworkImage(this.imagen), fit: BoxFit.cover),
-        ),
-        child: Center(
-            child: RaisedButton(
-          child: Text(this.nombre, style: TextStyle(fontSize: 40.0)),
-          onPressed: () {
-            launchUrlString(this.url);
-          },
-        )));
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Container(
+              width: this.ancho,
+              height: this.largo,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                border: Border.all(
+                  color: Colors.black,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                image: DecorationImage(
+                    image: NetworkImage(this.imagen), fit: BoxFit.fill),
+              ),
+              child: Center(
+                  child: RaisedButton(
+                child: Text(this.nombre, style: TextStyle(fontSize: 10.0)),
+                onPressed: () {
+                  launchUrlString(this.url);
+                },
+              )))
+        ]);
   }
 }
