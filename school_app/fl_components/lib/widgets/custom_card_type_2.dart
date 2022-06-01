@@ -1,24 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+//import 'paquete:url_launcher/url_launcher_string.dart';
 
 class CustomCardType2 extends StatelessWidget {
-  const CustomCardType2({Key? key}) : super(key: key);
+  final String name;
+  final String imageUrl;
+  final String linkurl;
+
+  const CustomCardType2(
+      {Key? key,
+      required this.name,
+      required this.imageUrl,
+      required this.linkurl})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+      elevation: 10,
       child: Column(
-        //mainAxisAlignment: MainAxisAlignment.end,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          TextButton(
-              onPressed: () {
-                launch('https://www.dgae.unam.mx/');
-              },
-              child: const Text('DGEA')),
-          const Image(
-              image: NetworkImage(
-                  'https://th.bing.com/th/id/R.3a3ba6978e5baf763d2b017b7e009f1b?rik=rVTOkDVzIe0g0w&riu=http%3a%2f%2fwww.fi-b.unam.mx%2fimages%2facademico%2fdgae.jpg&ehk=0UQ12dJIGi3x447wKqGEtFpExcTKvYCMSg9EsLERx9Q%3d&risl=&pid=ImgRaw&r=0'))
+          FadeInImage(
+            image: NetworkImage(imageUrl),
+            placeholder: const AssetImage('assets/jar-loading.gif'),
+            width: double.infinity,
+            height: 230,
+            fit: BoxFit.cover,
+            fadeInDuration: const Duration(milliseconds: 800),
+          ),
+          Container(
+            alignment: AlignmentDirectional.center,
+            padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
+            child:
+                //Text(name)
+                // children: [
+                TextButton(
+                    onPressed: () {
+                      // launchUrl(this.linkurl);
+                    },
+                    child: Text(name)),
+            //TextButton(onPressed: () {}, child: const Text('ok')),
+            //],
+          ),
         ],
       ),
     );
