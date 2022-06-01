@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-//import 'paquete:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class CustomCardType2 extends StatelessWidget {
   final String name;
@@ -34,16 +33,14 @@ class CustomCardType2 extends StatelessWidget {
           Container(
             alignment: AlignmentDirectional.center,
             padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-            child:
-                //Text(name)
-                // children: [
-                TextButton(
-                    onPressed: () {
-                      // launchUrl(this.linkurl);
-                    },
-                    child: Text(name)),
-            //TextButton(onPressed: () {}, child: const Text('ok')),
-            //],
+            child: TextButton(
+                style: TextButton.styleFrom(
+                  primary: Colors.indigo.shade900,
+                ),
+                onPressed: () {
+                  launchUrlString(linkurl);
+                },
+                child: Text(name)),
           ),
         ],
       ),

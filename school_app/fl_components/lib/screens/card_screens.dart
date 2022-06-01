@@ -8,8 +8,8 @@ class CardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Card Widget'),
-        ),
+            title: const Text('UNAM (sitios web principales)'),
+            backgroundColor: Colors.indigo.shade900),
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           children: const [
