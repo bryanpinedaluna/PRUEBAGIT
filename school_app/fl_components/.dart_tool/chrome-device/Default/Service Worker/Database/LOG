@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2022/05/31-17:31:17.678 3f00 Reusing MANIFEST C:\Users\User\AppData\Local\Temp\flutter_tools.21876116\flutter_tools_chrome_device.4bde70f1\Default\Service Worker\Database/MANIFEST-000001
 2022/05/31-17:31:17.680 3f00 Recovering log #3
 2022/05/31-17:31:17.681 3f00 Reusing old log C:\Users\User\AppData\Local\Temp\flutter_tools.21876116\flutter_tools_chrome_device.4bde70f1\Default\Service Worker\Database/000003.log 
@@ -7,3 +8,8 @@
 2022/05/31-10:09:27.405 3e74 Recovering log #3
 2022/05/31-10:09:27.406 3e74 Reusing old log C:\Users\HP\AppData\Local\Temp\flutter_tools.651d104b\flutter_tools_chrome_device.51325eb3\Default\Service Worker\Database/000003.log 
 >>>>>>> 63386693afc79fa1c3ef23859280559148ecba40
+=======
+2022/06/01-11:40:03.146 9a0 Reusing MANIFEST C:\Users\HP\AppData\Local\Temp\flutter_tools.e26eb050\flutter_tools_chrome_device.eb101d81\Default\Service Worker\Database/MANIFEST-000001
+2022/06/01-11:40:03.147 9a0 Recovering log #3
+2022/06/01-11:40:03.149 9a0 Reusing old log C:\Users\HP\AppData\Local\Temp\flutter_tools.e26eb050\flutter_tools_chrome_device.eb101d81\Default\Service Worker\Database/000003.log 
+>>>>>>> b138eff1655d8bf5c15182867a64c21eb775eacd
