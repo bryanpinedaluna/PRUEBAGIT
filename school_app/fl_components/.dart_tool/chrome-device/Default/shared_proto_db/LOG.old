@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2022/05/30-20:18:34.879 4838 Reusing MANIFEST C:\Users\User\AppData\Local\Temp\flutter_tools.79067af4\flutter_tools_chrome_device.9f298318\Default\shared_proto_db/MANIFEST-000001
 2022/05/30-20:18:34.880 4838 Recovering log #3
 2022/05/30-20:18:34.881 4838 Reusing old log C:\Users\User\AppData\Local\Temp\flutter_tools.79067af4\flutter_tools_chrome_device.9f298318\Default\shared_proto_db/000003.log 
+=======
+2022/05/30-23:39:53.266 5d30 Reusing MANIFEST C:\Users\HP\AppData\Local\Temp\flutter_tools.b97eca25\flutter_tools_chrome_device.9b6656b3\Default\shared_proto_db/MANIFEST-000001
+2022/05/30-23:39:53.266 5d30 Recovering log #3
+2022/05/30-23:39:53.267 5d30 Reusing old log C:\Users\HP\AppData\Local\Temp\flutter_tools.b97eca25\flutter_tools_chrome_device.9b6656b3\Default\shared_proto_db/000003.log 
+>>>>>>> 63386693afc79fa1c3ef23859280559148ecba40

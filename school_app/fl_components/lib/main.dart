@@ -1,5 +1,5 @@
 //*estas son las paqueterias u estenciones para que funcione el main principal
-
+//ESTE ES UN COMENTARIO DE PRUEBA
 import 'package:flutter/material.dart';
 
 import 'package:fl_components/theme/app_theme.dart';
