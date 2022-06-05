@@ -8,36 +8,15 @@ class AppRoutes {
 
   static final menuOptions = <MenuOption>[
     //TODO: borrar home
+
     MenuOption(
-        route: 'home',
-        name: 'Inicio',
-        screen: const HomeScreen(),
-        icon: Icons.home,
-        linkweb: 'https://www.codea.app/blog/cargar-url-flutter'),
+      route: 'card',
+      screen: const CardScreen(),
+    ),
     MenuOption(
-        route: 'listview1',
-        name: 'L1_Tramites',
-        screen: const Listview1Screen(),
-        icon: Icons.list,
-        linkweb: 'https://www.codea.app/blog/cargar-url-flutter'),
-    MenuOption(
-        route: 'lisrview2',
-        name: 'L2_Deportes',
-        screen: const Listview2Screen(),
-        icon: Icons.list_alt_rounded,
-        linkweb: 'https://www.codea.app/blog/cargar-url-flutter'),
-    MenuOption(
-        route: 'alert',
-        name: 'Alerts-Demo',
-        screen: const AlertScreen(),
-        icon: Icons.add_alert,
-        linkweb: 'https://www.codea.app/blog/cargar-url-flutter'),
-    MenuOption(
-        route: 'card',
-        name: 'Targetas-Demo',
-        screen: const CardScreen(),
-        icon: Icons.yard_rounded,
-        linkweb: 'https://www.codea.app/blog/cargar-url-flutter'),
+      route: 'listview1',
+      screen: const Listview1Screen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -50,7 +29,7 @@ class AppRoutes {
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     return MaterialPageRoute(
-      builder: (context) => const AlertScreen(),
+      builder: (context) => const Listview1Screen(),
     );
   }
 }

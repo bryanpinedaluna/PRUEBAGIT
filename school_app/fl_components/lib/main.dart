@@ -1,5 +1,6 @@
 //*estas son las paqueterias u estenciones para que funcione el main principal
 //ESTE ES UN COMENTARIO DE PRUEBA
+import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fl_components/theme/app_theme.dart';
@@ -16,15 +17,9 @@ class MyApp extends StatelessWidget {
   //* widget para la construcion de un widget con retorno
   Widget build(BuildContext context) {
     return MaterialApp(
-        //debugShowCheckedModeBanner: false,
-        title: 'Material App',
-        //*esta es es una referencia de las rutas del homeprincipal
-        initialRoute: AppRoutes.initialRoute,
-        //*rutas para accder al mapa de mi lista
-        routes: AppRoutes.getAppRoutes(),
-        //* generacion de mis rutas de forma dinamica
-        onGenerateRoute: AppRoutes.onGenerateRoute,
-        //* esta es una ref del file theme para dar color a los pantallas
-        theme: AppTheme.ligthTheme);
+      //* esta es una ref del file theme para dar color a los pantallas
+      theme: ThemeData(primarySwatch: Colors.red),
+      home: const HomeScreen(),
+    );
   }
 }

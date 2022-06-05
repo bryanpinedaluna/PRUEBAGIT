@@ -4,17 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import "package:fl_components/screens/contenedores.dart";
+import "package:fl_components/widgets/widgets.dart";
 
 //*clase listview1_screen de la forma instantanea
 class Listview1Screen extends StatelessWidget {
   //* lista de elmentos que no cambia
-
-  final linkurl = const [
-    'https://subes.becasbenitojuarez.gob.mx/',
-    'https://www.riu.unam.mx/',
-    'http://escolar.ingenieria.unam.mx/',
-    'https://www.dgae.unam.mx/'
-  ];
 
   const Listview1Screen({Key? key}) : super(key: key);
 
@@ -25,93 +19,48 @@ class Listview1Screen extends StatelessWidget {
         title: const Text('LISTA 1'),
       ),
       //* lista que soporta widget
-      body: mostrador1(),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        children: const [
+          // CustomCardType1(),
+          CustomCardType2(
+            name: 'FACULTAD DE INGENIERIA',
+            imageUrl:
+                'https://th.bing.com/th/id/R.bf5dd4e433cb8e3d918be9987cea309a?rik=R0Ed0Ww43RTXiA&riu=http%3a%2f%2fwww.oferta.unam.mx%2fassets%2fimg%2fdummies%2ffi1.jpg&ehk=%2bTuS6HMfRntVb6Rx2Qg7RdEWMNC4CdIOKyaekGfhxnM%3d&risl=&pid=ImgRaw&r=0',
+            linkurl: 'https://www.ingenieria.unam.mx/index.php',
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          CustomCardType2(
+            name: 'DIVISION DE CIENCIAS BASICAS',
+            imageUrl:
+                'https://th.bing.com/th/id/R.9a877845509846b9a4d30e7a51ce179c?rik=V9mdbkzyBr%2ffYA&riu=http%3a%2f%2fcomputacion.fi-b.unam.mx%2fimages%2flogos%2ffi01.png&ehk=U0yvNti2bi9kF39W1Es7CWyObpTt82xv1M%2fBOPdc7Vk%3d&risl=&pid=ImgRaw&r=0',
+            linkurl: 'https://dcb.ingenieria.unam.mx/',
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          CustomCardType2(
+            name: 'Horarios de asignaturas',
+            imageUrl:
+                'https://exitocol.vtexassets.com/arquivos/ids/277914/Reloj-Pared-Casio-Digital-Termometro-Hora-Fecha-Alarma-Id15.jpg?v=637002907487800000',
+            linkurl: 'https://www.ssa.ingenieria.unam.mx/horarios.html',
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          CustomCardType2(
+            name: 'BIBLIOTECA VIRTUAL FACULTAD DE INGENIERIA',
+            imageUrl:
+                'https://th.bing.com/th/id/OIP.P5wpIyvdCEXF5fD5nIrskQHaE8?pid=ImgDet&rs=1',
+            linkurl: 'https://www.ingenieria.unam.mx/bibliotecas/',
+          ),
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
     );
   }
-}
-
-Widget mostrador1() {
-  return Column(children: <Widget>[
-    Expanded(
-      child: contenedores(
-          400,
-          120,
-          "https://th.bing.com/th/id/OIP.5lSlUhZVHFEjnrXhhyesmgAAAA?pid=ImgDet&rs=1",
-          "SIAE",
-          "https://www.dgae-siae.unam.mx/"),
-    ),
-    Expanded(
-      child: contenedores(
-          400,
-          120,
-          "https://th.bing.com/th/id/R.1e572629d4bcb61500c6966aa45d065b?rik=k%2fNnQSl1fkiWWQ&riu=http%3a%2f%2fwww.gob.mx%2fcms%2fuploads%2faction_program%2fmain_image%2f8243%2fTr_mites_y_Servicios-01.jpg&ehk=Wc3v5pwTAeYQLl68zl9ukatXXz%2bE0JoexrBXEU84IXk%3d&risl=&pid=ImgRaw&r=0",
-          "TRAMITES Y SERVICIOS",
-          "http://escolar.ingenieria.unam.mx/"),
-    ),
-    Expanded(
-      child: contenedores(
-          400,
-          120,
-          "https://th.bing.com/th/id/OIP.QqTBAH6aCk4LdYS7NZDoaAHaDn?pid=ImgDet&w=704&h=344&rs=1",
-          "ASESORIAS",
-          "https://dcb.ingenieria.unam.mx/index.php/asesorias/ "),
-    ),
-    Expanded(
-      child: contenedores(
-          400,
-          120,
-          "https://th.bing.com/th/id/R.324d200be3ba335cf8c07ccb6633e4a1?rik=PhxeCRLCWmnU%2fA&pid=ImgRaw&r=0",
-          "DGAE",
-          "https://www.dgae.unam.mx/"),
-    ),
-  ]
-      //decoration: BoxDecoration(
-      //image: DecorationImage(
-      //image: NetworkImage(
-      //"https://th.bing.com/th/id/R.324d200be3ba335cf8c07ccb6633e4a1?rik=PhxeCRLCWmnU%2fA&pid=ImgRaw&r=0"),
-      //fit: BoxFit.cover)),
-      );
-}
-
-Widget mostrador2() {
-  return Column(children: <Widget>[
-    Expanded(
-      child: contenedores(
-          300,
-          100,
-          "https://th.bing.com/th/id/OIP.5lSlUhZVHFEjnrXhhyesmgAAAA?pid=ImgDet&rs=1",
-          "SIAE",
-          "https://www.dgae-siae.unam.mx/"),
-    ),
-    Expanded(
-      child: contenedores(
-          300,
-          100,
-          "https://th.bing.com/th/id/R.1e572629d4bcb61500c6966aa45d065b?rik=k%2fNnQSl1fkiWWQ&riu=http%3a%2f%2fwww.gob.mx%2fcms%2fuploads%2faction_program%2fmain_image%2f8243%2fTr_mites_y_Servicios-01.jpg&ehk=Wc3v5pwTAeYQLl68zl9ukatXXz%2bE0JoexrBXEU84IXk%3d&risl=&pid=ImgRaw&r=0",
-          "TRAMITES Y SERVICIOS",
-          "http://escolar.ingenieria.unam.mx/"),
-    ),
-    Expanded(
-      child: contenedores(
-          300,
-          100,
-          "https://th.bing.com/th/id/OIP.QqTBAH6aCk4LdYS7NZDoaAHaDn?pid=ImgDet&w=704&h=344&rs=1",
-          "ASESORIAS",
-          "https://dcb.ingenieria.unam.mx/index.php/asesorias/ "),
-    ),
-    Expanded(
-      child: contenedores(
-          300,
-          100,
-          "https://th.bing.com/th/id/R.324d200be3ba335cf8c07ccb6633e4a1?rik=PhxeCRLCWmnU%2fA&pid=ImgRaw&r=0",
-          "DGAE",
-          "https://www.dgae.unam.mx/"),
-    ),
-  ]
-      //decoration: BoxDecoration(
-      //image: DecorationImage(
-      //image: NetworkImage(
-      //"https://th.bing.com/th/id/R.324d200be3ba335cf8c07ccb6633e4a1?rik=PhxeCRLCWmnU%2fA&pid=ImgRaw&r=0"),
-      //fit: BoxFit.cover)),
-      );
 }
