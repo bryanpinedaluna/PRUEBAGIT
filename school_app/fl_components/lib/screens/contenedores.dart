@@ -1,21 +1,19 @@
 import 'package:flutter/widgets.dart';
-
+import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class contenedores extends StatelessWidget {
   double ancho = 0;
   double largo = 0;
   String imagen = "insert image";
   String nombre = "inserte nombre";
-  String url;
+  String screen;
 
-  contenedores(this.ancho, this.largo, this.imagen, this.nombre, this.url);
+  contenedores(this.ancho, this.largo, this.imagen, this.nombre, this.screen);
   @override
   Widget build(BuildContext context) {
     return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.max,
         children: [
           Container(
@@ -26,7 +24,7 @@ class contenedores extends StatelessWidget {
                 border: Border.all(
                   color: Colors.black,
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(20)),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
                 image: DecorationImage(
                     image: NetworkImage(this.imagen), fit: BoxFit.fill),
               ),
@@ -34,7 +32,9 @@ class contenedores extends StatelessWidget {
                   child: RaisedButton(
                 child: Text(this.nombre, style: TextStyle(fontSize: 10.0)),
                 onPressed: () {
-                  launchUrlString(this.url);
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const CardScreen(),
+                  ));
                 },
               )))
         ]);
