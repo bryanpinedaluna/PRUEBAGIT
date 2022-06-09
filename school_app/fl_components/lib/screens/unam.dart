@@ -8,13 +8,12 @@ class CardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: const Text('UNAM (sitios web principales)'),
-            backgroundColor: Colors.indigo.shade900),
+          title: const Text('UNAM (sitios web)'),
+          //backgroundColor: Colors.indigo.shade900
+        ),
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           children: const [
-            // CustomCardType1(),
-
             CustomCardType2(
               name: 'UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO',
               imageUrl:
@@ -24,14 +23,12 @@ class CardScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-
             CustomCardType2(
               name: 'DIRECCION GENERAL ADMINISTRACION ESCOLAR',
               imageUrl:
                   'https://www.eluniversal.com.mx/sites/default/files/2020/12/08/010unam_cu_2.jpg',
               linkurl: 'https://www.dgae.unam.mx/',
             ),
-
             CustomCardType2(
               name: 'SISTEMA INTEGRAL DE ADMINISTRACION ESCOLAR',
               imageUrl:

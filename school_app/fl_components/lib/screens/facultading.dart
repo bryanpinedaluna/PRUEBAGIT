@@ -1,23 +1,15 @@
-//import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
-import "package:fl_components/screens/contenedores.dart";
 import "package:fl_components/widgets/widgets.dart";
 
-//*clase listview1_screen de la forma instantanea
 class Listview1Screen extends StatelessWidget {
-  //* lista de elmentos que no cambia
-
   const Listview1Screen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FACULTAD DE INGENIERIA (principales sitios web)'),
-      ),
+          title: const Text('FACULTAD DE INGENIERIA (sitios web)'),
+          backgroundColor: Colors.red),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: const [

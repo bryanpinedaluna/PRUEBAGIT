@@ -1,15 +1,16 @@
-import 'package:flutter/widgets.dart';
-import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
+import 'package:fl_components/screens/screens.dart';
 
-class contenedores2 extends StatelessWidget {
+class Contenedores2 extends StatelessWidget {
   double ancho = 0;
   double largo = 0;
   String imagen = "insert image";
   String nombre = "inserte nombre";
   String screen;
 
-  contenedores2(this.ancho, this.largo, this.imagen, this.nombre, this.screen);
+  Contenedores2(this.ancho, this.largo, this.imagen, this.nombre, this.screen,
+      {Key? key})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,8 +19,8 @@ class contenedores2 extends StatelessWidget {
         verticalDirection: VerticalDirection.down,
         children: [
           Container(
-              width: this.ancho,
-              height: this.largo,
+              width: ancho,
+              height: largo,
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 border: Border.all(
@@ -27,11 +28,11 @@ class contenedores2 extends StatelessWidget {
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
                 image: DecorationImage(
-                    image: NetworkImage(this.imagen), fit: BoxFit.fill),
+                    image: NetworkImage(imagen), fit: BoxFit.fill),
               ),
               child: Center(
                   child: RaisedButton(
-                child: Text(this.nombre, style: TextStyle(fontSize: 10.0)),
+                child: Text(nombre, style: const TextStyle(fontSize: 10.0)),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const Listview1Screen(),

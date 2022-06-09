@@ -1,3 +1,4 @@
+import 'package:fl_components/widgets/card_swiper.dart';
 import 'package:flutter/material.dart';
 import "package:fl_components/screens/screens.dart";
 
@@ -7,21 +8,26 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: const Text('BIENVENIDO'),
-            backgroundColor: Colors.indigo.shade900
-            //elevation: 0,
-            ),
-        body: Center(
-          child: mostrador(),
-        ));
+      appBar: AppBar(
+        title: const Text('BIENVENIDO'),
+        elevation: 0,
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+      ),
+      body: Container(
+          child: Column(
+        children: [
+          CardSwiper(),
+          mostrador(),
+        ],
+      )),
+    );
   }
 }
 
 Widget mostrador() {
-  return Column(children: <Widget>[
+  return Row(children: <Widget>[
     Expanded(
-      child: contenedores(
+      child: Contenedores(
           400,
           250,
           "https://th.bing.com/th/id/R.54f55f2e17c220a2deae5ceda25ae798?rik=24gvCRP%2f5NutMQ&pid=ImgRaw&r=0",
@@ -29,7 +35,7 @@ Widget mostrador() {
           "card"),
     ),
     Expanded(
-      child: contenedores2(
+      child: Contenedores2(
           400,
           250,
           "https://static.wixstatic.com/media/09952d_11bf5469779f46d09e9cc7fa9b1395fe.jpg",
