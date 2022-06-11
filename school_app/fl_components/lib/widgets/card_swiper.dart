@@ -16,11 +16,16 @@ class CardSwiper extends StatelessWidget {
         itemWidth: size.height * 0.6,
         itemHeight: size.height * 0.4,
         itemBuilder: (_, int index) {
-          return FadeInImage(
+          return ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: const FadeInImage(
               placeholder: NetworkImage(
-                  'https://th.bing.com/th/id/OIP.9Cev8VrPqNziPlUNDWX_LwHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7/300x400'),
+                  'https://th.bing.com/th/id/OIP._I84M8M0i2PgdpX1NMO-aAHaEK?w=279&h=180&c=7&r=0&o=5&pid=1.7'),
               image: NetworkImage(
-                  'https://th.bing.com/th/id/R.edee9b1a1f9d877d030e506b85c6e454?rik=MwPCpROPk7HZeA&pid=ImgRaw&r=0'));
+                  'https://th.bing.com/th/id/OIP.jOiUq_fT1Tpe4rr1V9snFAHaE7?w=261&h=180&c=7&r=0&o=5&pid=1.7'),
+              fit: BoxFit.cover,
+            ),
+          );
         },
       ),
     );

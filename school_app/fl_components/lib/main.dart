@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {'home': (_) => const HomeScreen()},
       theme: ThemeData(primarySwatch: Colors.indigo),
-      //home: const HomeScreen(),
     );
   }
 }

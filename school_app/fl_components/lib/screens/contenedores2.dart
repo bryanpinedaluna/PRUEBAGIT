@@ -16,7 +16,7 @@ class Contenedores2 extends StatelessWidget {
     return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.max,
-        verticalDirection: VerticalDirection.down,
+        //verticalDirection: VerticalDirection.down,
         children: [
           Container(
               width: ancho,
@@ -28,7 +28,7 @@ class Contenedores2 extends StatelessWidget {
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
                 image: DecorationImage(
-                    image: NetworkImage(imagen), fit: BoxFit.fill),
+                    image: NetworkImage(imagen), fit: BoxFit.cover),
               ),
               child: Center(
                   child: RaisedButton(

@@ -9,7 +9,6 @@ class CardScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('UNAM (sitios web)'),
-          //backgroundColor: Colors.indigo.shade900
         ),
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),

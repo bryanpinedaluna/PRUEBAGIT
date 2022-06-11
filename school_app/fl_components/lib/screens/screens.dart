@@ -3,3 +3,4 @@ export "package:fl_components/screens/contenedores2.dart";
 export 'package:fl_components/screens/unam.dart';
 export 'package:fl_components/screens/home_screen.dart';
 export "package:fl_components/screens/contenedores.dart";
+export 'package:fl_components/screens/menu_fiunam.dart';
