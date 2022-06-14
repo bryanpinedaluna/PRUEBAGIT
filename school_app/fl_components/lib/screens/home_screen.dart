@@ -17,11 +17,13 @@ class HomeScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Column(
+            //mainAxisSize: MainAxisSize.max,
+            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const CardSwiper(),
-              const MenuFiunam(),
-              mostrador(),
-              //MostradorUF(),
+              const CardSwiper(), //*carrucel
+              const MostradorUF(), //*listbuider
+              const MenuFiunam(), //*pantalla unam y ingenieria
+              mostrador(), //*pantalla bryan
             ],
           ),
         ));

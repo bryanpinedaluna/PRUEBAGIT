@@ -18,18 +18,18 @@ class CustomCardType3 extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
       elevation: 10,
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           FadeInImage(
             image: NetworkImage(imageUrl),
             placeholder: const AssetImage('assets/jar-loading.gif'),
-            width: double.infinity,
-            height: 230,
+            width: 200,
+            height: 190,
             fit: BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 800),
           ),
           Container(
-            alignment: AlignmentDirectional.center,
+            alignment: AlignmentDirectional.topEnd,
             padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
             child: TextButton(
                 style: TextButton.styleFrom(

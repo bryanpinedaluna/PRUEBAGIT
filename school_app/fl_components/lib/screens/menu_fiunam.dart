@@ -8,19 +8,21 @@ class MenuFiunam extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
-        height: 300,
-        //color: Colors.orange,
+        height: 350,
+        //*color: Colors.orange,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Text('UNAN Y FI',
-                    style: TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.normal))),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: Text('UNAN Y FACULTAD DE INGENIERIA',
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold))),
             Expanded(
                 child: ListView(
-              //scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              scrollDirection: Axis.horizontal,
+              //padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               children: const [
                 CustomCardType3(
                   name: 'UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO',
@@ -32,7 +34,8 @@ class MenuFiunam extends StatelessWidget {
                 ),
                 CustomCardType3(
                   name: 'FACULTAD DE INGENIRIA',
-                  imageUrl: '',
+                  imageUrl:
+                      'https://th.bing.com/th/id/R.c7ef8ddf0554d5e194f52c46272df7d2?rik=wY%2byX4vAoXaeqw&riu=http%3a%2f%2fwww.oferta.unam.mx%2fassets%2fimg%2fdummies%2ffi2.jpg&ehk=4cB23oevztpWzKzZfycp4qJtz1KwAg2IWFPA3SrOJMA%3d&risl=&pid=ImgRaw&r=0',
                 ),
               ],
             ))
