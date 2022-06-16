@@ -11,15 +11,16 @@ class MenuFiunam extends StatelessWidget {
         height: 300,
         //color: Colors.orange,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Text('UNAN Y FI',
-                    style: TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.normal))),
+                child: Text('UNAM Y FACULTAD DE INGENIERIA',
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold))),
             Expanded(
                 child: ListView(
-              //scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 20),
               children: const [
                 CustomCardType3(
@@ -32,7 +33,8 @@ class MenuFiunam extends StatelessWidget {
                 ),
                 CustomCardType3(
                   name: 'FACULTAD DE INGENIRIA',
-                  imageUrl: '',
+                  imageUrl:
+                      'https://th.bing.com/th/id/OIP.geYGtNny22qRLgXJ1SXfNAHaFj?w=228&h=180&c=7&r=0&o=5&pid=1.7',
                 ),
               ],
             ))
