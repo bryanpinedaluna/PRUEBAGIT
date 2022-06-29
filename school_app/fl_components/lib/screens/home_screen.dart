@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             children: const [
               CardSwiper(),
               MenuFiunam(),
-              MostradorUF(),
+              Facultadeslist(),
               //mostrador(),
             ],
           ),

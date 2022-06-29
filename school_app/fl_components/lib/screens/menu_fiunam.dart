@@ -14,7 +14,7 @@ class MenuFiunam extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Text('UNAM Y FACULTAD DE INGENIERIA',
                     style:
                         TextStyle(fontSize: 15, fontWeight: FontWeight.bold))),
